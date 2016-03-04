@@ -40,8 +40,6 @@ IMAGE_FSTYPES ?= "ubi"
 
 UBI_VOLNAME = "rootfs"
 
-IMAGEDIR ?= "zgemma/${MACHINE}"
-
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
 	cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ubi ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.bin; \
