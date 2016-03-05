@@ -51,7 +51,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -Rf miraclebox; \
 	"
 
-MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec"
+MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec dvbusb"
 
 require conf/machine/include/tune-mips32.inc
 require conf/machine/include/miraclebox-wifi.inc
