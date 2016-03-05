@@ -1,16 +1,13 @@
 SUMMARY = "Utilities for transponder & dvb-c blindscan"
 SECTION = "base"
 PRIORITY = "optional"
-RDEPENDS_${PN} = "ncurses"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 LICENSE = "CLOSED"
 
-PACKAGES = "miraclebox-blindscan-dvbc-utils miraclebox-blindscan-dvbc-utils-dbg"
-
 PROVIDES += "virtual/blindscan-dvbc"
-RPROVIDES_miraclebox-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
+RPROVIDES_${PN} += "virtual/blindscan-dvbc"
 
 SRC_URI = "http://source.mynonpublic.com/broadmedia/g300-dvbc-blindscan-1.0.zip"
 
@@ -19,9 +16,8 @@ PR = "r0"
 
 S = "${WORKDIR}/"
 
-FILES_broadmedia-blindscan-dvbc-utils = "${bindir}/tda1002x"
-FILES_broadmedia-blindscan-dvbc-utils-dbg = "${bindir}/.debug/tda1002x"
-
+do_compile() {
+}
 
 do_install() {
     install -d ${D}/${bindir}/
