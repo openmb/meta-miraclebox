@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 LICENSE = "CLOSED"
 
-PACKAGES = "broadmedia-blindscan-dvbc-utils broadmedia-blindscan-dvbc-utils-dbg"
+PACKAGES = "miraclebox-blindscan-dvbc-utils miraclebox-blindscan-dvbc-utils-dbg"
 
 PROVIDES += "virtual/blindscan-dvbc"
 RPROVIDES_broadmedia-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
