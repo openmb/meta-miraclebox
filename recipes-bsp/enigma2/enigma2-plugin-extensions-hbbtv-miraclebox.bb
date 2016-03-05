@@ -1,8 +1,6 @@
 DESCRIPTION = "Miraclebox HbbTv"
-LICENSE = "GPLv2"
+LICENSE = "closed"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-
-LIC_FILES_CHKSUM = "file://README.md;md5=4a881119de8945a8b2ca1da5e5ca1f58"
 
 SRC_URI = "file://enigma2-plugin-extensions-hbbtv-miraclebox.tar.gz"
 
