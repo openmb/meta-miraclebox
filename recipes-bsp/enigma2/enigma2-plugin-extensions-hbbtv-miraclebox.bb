@@ -1,5 +1,7 @@
 DESCRIPTION = "Miraclebox HbbTv"
-LICENSE = "closed"
+PRIORITY = "optional"
+LICENSE = "CLOSED"
+
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 SRC_URI = "file://enigma2-plugin-extensions-hbbtv-miraclebox.tar.gz"
