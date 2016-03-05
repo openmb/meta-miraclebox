@@ -10,7 +10,7 @@ LICENSE = "CLOSED"
 PACKAGES = "miraclebox-blindscan-dvbc-utils miraclebox-blindscan-dvbc-utils-dbg"
 
 PROVIDES += "virtual/blindscan-dvbc"
-RPROVIDES_broadmedia-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
+RPROVIDES_miraclebox-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
 
 SRC_URI = "http://source.mynonpublic.com/broadmedia/g300-dvbc-blindscan-1.0.zip"
 

@@ -22,5 +22,5 @@ S="${WORKDIR}/usr"
 
 do_install() {
 	install -d ${D}/usr
-	cp -a ${S}/* ${D}/
+	cp -a ${S}/* ${D}/usr/
 }
