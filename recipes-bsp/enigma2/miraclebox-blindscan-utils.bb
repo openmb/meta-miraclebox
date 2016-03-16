@@ -7,10 +7,11 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 LICENSE = "CLOSED"
 
-PROVIDES += "virtual/blindscan-dvbc"
-RPROVIDES_${PN} += "virtual/blindscan-dvbc"
-PROVIDES += "virtual/blindscan-dvbs"
-RPROVIDES_${PN} += "virtual/blindscan-dvbs"
+PACKAGES = "miraclebox-blindscan-dvbs-utils miraclebox-blindscan-dvbc-utils"
+
+PROVIDES += "virtual/blindscan-dvbs virtual/blindscan-dvbc"
+RPROVIDES_miraclebox-blindscan-dvbs-utils += "virtual/blindscan-dvbs"
+RPROVIDES_miraclebox-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
 
 SRC_URI = "file://tda1002x file://ini_blindscan"
 
