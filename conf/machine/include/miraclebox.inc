@@ -29,7 +29,7 @@ DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE ?= "mips32el"
 
-PREFERRED_PROVIDER_virtual/kernel = "linux-miraclebox"
+PREFERRED_PROVIDER_virtual/kernel = "linux-${MACHINE}"
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"

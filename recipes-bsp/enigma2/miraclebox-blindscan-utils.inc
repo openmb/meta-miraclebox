@@ -2,16 +2,13 @@ SUMMARY = "Utilities for transponder & dvb-s blindscan"
 SECTION = "base"
 PRIORITY = "optional"
 RDEPENDS_${PN} = "ncurses"
-
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-
 LICENSE = "CLOSED"
 
-PACKAGES = "miraclebox-blindscan-dvbs-utils miraclebox-blindscan-dvbc-utils"
+PACKAGES = "miraclebox-blindscan-dvbs-utils-${MACHINE} miraclebox-blindscan-dvbc-utils-${MACHINE}"
 
 PROVIDES += "virtual/blindscan-dvbs virtual/blindscan-dvbc"
-RPROVIDES_miraclebox-blindscan-dvbs-utils += "virtual/blindscan-dvbs"
-RPROVIDES_miraclebox-blindscan-dvbc-utils += "virtual/blindscan-dvbc"
+RPROVIDES_miraclebox-blindscan-dvbs-utils-${MACHINE} += "virtual/blindscan-dvbs"
+RPROVIDES_miraclebox-blindscan-dvbc-utils-${MACHINE} += "virtual/blindscan-dvbc"
 
 SRC_URI = "file://tda1002x file://ini_blindscan"
 
