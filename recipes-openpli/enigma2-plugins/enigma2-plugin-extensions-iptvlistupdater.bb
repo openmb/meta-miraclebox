@@ -2,7 +2,7 @@ SUMMARY = "IPTV Bouquet Updater Plugin by Nobody28 & satinfo "
 MAINTAINER = "Nobody28 & satinfo"
 SECTION = "extra"
 PRIORITY = "optional"
-RDEPENDS_${PN} = "gst-plugins-bad-rtmp librtmp1 python-textutils udpxy curl"
+RDEPENDS_${PN} = "gst-plugins-bad-rtmp librtmp python-textutils udpxy curl"
 
 require conf/license/openpli-gplv2.inc
 
