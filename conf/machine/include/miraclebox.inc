@@ -31,6 +31,9 @@ DEFAULTTUNE ?= "mips32el"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-${MACHINE}"
 
+PREFERRED_PROVIDER_virtual/blindscan-dvbc = "miraclebox-blindscan-utils-${MACHINE}"
+PREFERRED_PROVIDER_virtual/blindscan-dvbs = "miraclebox-blindscan-utils-${MACHINE}"
+
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
 KERNEL_CONSOLE = "null"
@@ -57,7 +60,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -Rf miraclebox; \
 	"
 
-MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec dvbusb bootsplash"
+MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec dvbusb"
 
 require conf/machine/include/tune-mips32.inc
 require conf/machine/include/miraclebox-wifi.inc
