@@ -21,7 +21,6 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = "\
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	gst-plugin-dvbmediasink \
-	ntfs-3g \
 	"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
