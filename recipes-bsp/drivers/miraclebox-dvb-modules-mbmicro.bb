@@ -4,13 +4,13 @@ PRIORITY = "required"
 LICENSE = "CLOSED"
 
 KV = "4.0.1"
-SRCDATE = "20160520"
+SRCDATE = "20160909"
 
 PV = "${KV}+${SRCDATE}"
 PR = "r0"
 
-SRC_URI[md5sum] = "e9eb8d9030ef04bbbc38cde48a1d9e5f"
-SRC_URI[sha256sum] = "80bb4e1c83d1657bb969eb3b98f21bdb0ef81a60ac76865b81c9076be3c1a0df"
+SRC_URI[md5sum] = "2f3d69ccf18d3082f108221059ffbba0"
+SRC_URI[sha256sum] = "883ac7425103ef4ed88f67cc1df092a7af122eae45f9bfe3d1321eb9e741fd2d"
 
 SRC_URI = "http://source.mynonpublic.com/ceryon/ceryon-7000s-dvbdrive-${SRCDATE}.zip"
 
