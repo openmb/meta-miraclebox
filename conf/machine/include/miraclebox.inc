@@ -35,6 +35,7 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs = "miraclebox-blindscan-utils-${MACHIN
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
+KERNEL_OUTPUT_DIR = "."
 KERNEL_CONSOLE = "null"
 SERIAL_CONSOLE ?= ""
 
