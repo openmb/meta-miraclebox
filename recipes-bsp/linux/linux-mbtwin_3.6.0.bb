@@ -51,6 +51,9 @@ SRC_URI += "http://code-ini.com/software/kernel/bcm7413-linux-${KV}-${SRCDATE}.t
     file://nfs-max-rwsize-8k.patch \
     file://rtl8712-fix-warnings.patch \
     file://rtl8187se-fix-warnings.patch \
+    file://kernel-add-support-for-gcc6.patch \
+    file://dvb_frontend-Multistream-support-3.6.patch \
+    file://timeconst_perl5.patch \
     "
 
 inherit kernel
