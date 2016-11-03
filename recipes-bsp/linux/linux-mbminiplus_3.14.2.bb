@@ -75,6 +75,3 @@ pkg_postinst_kernel-image () {
 	fi
 	true
 }
-# extra tasks
-addtask kernel_link_images after do_compile before do_install
-
