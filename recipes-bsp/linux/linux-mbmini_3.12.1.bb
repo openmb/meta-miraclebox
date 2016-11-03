@@ -21,7 +21,6 @@ RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://code-ini.com/software/kernel/bcm7358-linux-${KV}-${SRCDATE}.tgz \
-    file://defconfig \
     file://add-dmx-source-timecode.patch \
     file://add-rt2800usb-wifi-devices.patch \
     file://af9015-output-full-range-SNR.patch \
@@ -42,6 +41,12 @@ SRC_URI += "http://code-ini.com/software/kernel/bcm7358-linux-${KV}-${SRCDATE}.t
     file://linux-3.12.1-gcc-4.9.3-build-error-fixed.patch \
     file://kernel-add-support-for-gcc-5.patch \
     file://rtl8712-fix-warnings.patch \
+    file://kernel-add-support-for-gcc6.patch \
+    file://0001-Support-TBS-USB-drivers.patch \
+    file://0001-STV-Add-PLS-support.patch \
+    file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+    file://0001-stv090x-optimized-TS-sync-control.patch \
+    file://blindscan2.patch \
     "
 
 inherit kernel
@@ -72,3 +77,6 @@ pkg_postinst_kernel-image () {
 	fi
 	true
 }
+# extra tasks
+addtask kernel_link_images after do_compile before do_install
+

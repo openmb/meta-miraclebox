@@ -38,6 +38,12 @@ SRC_URI += "http://code-ini.com/software/kernel/bcm7425-linux-${KV}-${SRCDATE}.t
 	file://linux-3.14.2-gcc-4.9.3-build-error-fixed.patch \
 	file://kernel-add-support-for-gcc-5.patch \
 	file://rtl8712-fix-warnings.patch \
+	file://kernel-add-support-for-gcc6.patch \
+	file://0001-Support-TBS-USB-drivers.patch \
+	file://0001-STV-Add-PLS-support.patch \
+	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+	file://0001-stv090x-optimized-TS-sync-control.patch \
+	file://blindscan2.patch \
 	"
 
 inherit kernel
@@ -68,3 +74,9 @@ pkg_postinst_kernel-image () {
 	fi
 	true
 }
+
+do_rm_work() {
+}
+
+# extra tasks
+addtask kernel_link_images after do_compile before do_install
