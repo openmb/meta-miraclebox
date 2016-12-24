@@ -20,7 +20,7 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://code-ini.com/software/kernel/bcm7358-linux-${KV}-${SRCDATE}.tgz \
+SRC_URI += "http://source.mynonpublic.com/ini/bcm7358-linux-${KV}-${SRCDATE}.tgz \
     file://add-dmx-source-timecode.patch \
     file://add-rt2800usb-wifi-devices.patch \
     file://af9015-output-full-range-SNR.patch \
