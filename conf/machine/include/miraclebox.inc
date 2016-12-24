@@ -36,12 +36,15 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs = "miraclebox-blindscan-utils-${MACHIN
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
+KERNEL_OUTPUT_DIR = "."
 KERNEL_CONSOLE = "null"
 SERIAL_CONSOLE ?= ""
 
 IMAGE_FSTYPES ?= "ubi"
 
 UBI_VOLNAME = "rootfs"
+
+IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
