@@ -8,9 +8,10 @@ PR = "r1"
 inherit module
 
 SRC_URI = " \
-    http://code-ini.com/software/mirror/2011_0719_RT3070_RT3370_RT5370_RT5372_Linux_STA_V${PV}_DPO.tar.gz \
+    http://source.mynonpublic.com/ini/2011_0719_RT3070_RT3370_RT5370_RT5372_Linux_STA_V${PV}_DPO.tar.gz \
     file://makefile.patch \
     file://config.patch \
+    file://remove_linux_2_4_compability.patch \
 "
 SRC_URI[md5sum] = "c314f126ba47fac563988b08b5554d82"
 SRC_URI[sha256sum] = "c1555c6e8b042eb50579f5dae379d8dab3b2cde20e2e443a6b056d4b7812b3fe"
