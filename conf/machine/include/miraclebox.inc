@@ -10,7 +10,7 @@ IMAGE_CMD_ubi_prepend = " \
 	"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
-	${@base_contains("GST_VERSION", "1.0", "gstreamer1.0-libav", "gst-ffmpeg", d)} \
+	${@bb.utils.contains("GST_VERSION", "1.0", "gstreamer1.0-libav", "gst-ffmpeg", d)} \
 	miraclebox-dvb-modules-${MACHINE} \
 	kernel-vmlinux \
 	"
@@ -44,16 +44,22 @@ IMAGE_FSTYPES ?= "ubi"
 UBI_VOLNAME = "rootfs"
 
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
+IMAGEVERSION := "${DISTRO_NAME}-${DISTRO_VERSION}-${DATE}"
+IMAGEVERSION[vardepsexclude] = "DATE"
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
-	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.bin; \
+	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.bin; \
 	gzip -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \
-	echo ${DISTRO_NAME}-${DISTRO_VERSION}-${DATE} > ${IMGDEPLOYDIR}/${IMAGEDIR}/imageversion; \
+	echo "${IMAGEVERSION}" > ${IMGDEPLOYDIR}/${IMAGEDIR}/imageversion; \
 	echo "rename this file to 'force' to force an update without confirmation" > ${IMGDEPLOYDIR}/${IMAGEDIR}/noforce; \
 	cd ${IMGDEPLOYDIR}; \
-	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
-	rm -rf miraclebox; \
+	zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_usb.zip ${IMAGEDIR}/*; \
+	rm -Rf miraclebox; \
+	"
+
+IMAGE_CMD_ubi_prepend = " \
+	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 
 MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec dvbusb"
