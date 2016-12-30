@@ -4,6 +4,7 @@ PRIORITY = "required"
 LICENSE = "CLOSED"
 
 KV = "4.1.24"
+GCCREV = "5.3.0"
 SRCDATE = "20161215"
 
 SRC_URI[md5sum] = "45504ae6be6548b416760cb3c3b82758"
