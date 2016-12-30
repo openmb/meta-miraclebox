@@ -1,8 +1,6 @@
 DESCRIPTION = "mgcamd ${PV} softcam"
 CAMNAME = "mgcamd"
 
-RDEPENDS_${PN} = "libcrypto-compat"
-
 PR = "r5"
 
 SRC_URI = "http://downloads.pli-images.org/softcams/mgcamd${PV}.zip \
