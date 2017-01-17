@@ -22,7 +22,6 @@ RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://source.mynonpublic.com/broadmedia/broadmedia-linux-${PV}-${SRC}.tar.xz \
-<<<<<<< HEAD
 	file://defconfig \
 	file://kernel-add-support-for-gcc6.patch \
 	file://0001-Support-TBS-USB-drivers-for-4.1-kernel.patch \
