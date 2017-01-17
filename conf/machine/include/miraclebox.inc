@@ -23,7 +23,9 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	gst-plugin-dvbmediasink \
 	"
 
-DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
+DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 \
+    ${@base_contains('MACHINE', 'mbmicrov2', '--with-h265 --with-vb6 --with-vb8 --with-spark' , '', d)} \
+"
 
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE ?= "mips32el"
