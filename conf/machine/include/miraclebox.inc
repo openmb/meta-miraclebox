@@ -24,7 +24,9 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	${@bb.utils.contains("MACHINE_FEATURES", "extrasplash", "miraclebox-cfe", "", d)} \
 	"
 
-DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3"
+DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 \
+    ${@base_contains('MACHINE', 'mbmicrov2', '--with-h265 --with-vb6 --with-vb8 --with-spark' , '', d)} \
+"
 
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE ?= "mips32el"
@@ -63,7 +65,7 @@ IMAGE_CMD_ubi_append = " \
 	echo "rename this file to 'force' to force an update without confirmation" > ${IMGDEPLOYDIR}/${IMAGEDIR}/noforce; \
 	cd ${IMGDEPLOYDIR}; \
 	zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}-${DATE}_usb.zip ${IMAGEDIR}/*; \
-	rm -Rf ${IMAGEDIR}; \
+	rm -Rf miraclebox; \
 	"
 
 IMAGE_CMD_ubi_prepend = " \
