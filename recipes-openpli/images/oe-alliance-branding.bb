@@ -86,12 +86,12 @@ do_install_append() {
     install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes
     install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/static
     if [ ${MACHINEBUILD} = "ventonhdx" ]; then
-        install -m 0644 ${S}/BoxBranding/boxes/uniboxhd1.jpg ${D}/usr/share/enigma2/uniboxhd1.jpg
-        ln -sf /usr/share/enigma2/uniboxhd1.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/uniboxhd1.jpg
-        install -m 0644 ${S}/BoxBranding/boxes/uniboxhd2.jpg ${D}/usr/share/enigma2/uniboxhd2.jpg
-        ln -sf /usr/share/enigma2/uniboxhd2.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/uniboxhd2.jpg
-        install -m 0644 ${S}/BoxBranding/boxes/uniboxhd3.jpg ${D}/usr/share/enigma2/uniboxhd3.jpg
-        ln -sf /usr/share/enigma2/uniboxhd3.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/uniboxhd3.jpg
+        install -m 0644 ${S}/BoxBranding/boxes/uniboxhd1.png ${D}/usr/share/enigma2/uniboxhd1.png
+        ln -sf /usr/share/enigma2/uniboxhd1.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/uniboxhd1.png
+        install -m 0644 ${S}/BoxBranding/boxes/uniboxhd2.png ${D}/usr/share/enigma2/uniboxhd2.png
+        ln -sf /usr/share/enigma2/uniboxhd2.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/uniboxhd2.png
+        install -m 0644 ${S}/BoxBranding/boxes/uniboxhd3.png ${D}/usr/share/enigma2/uniboxhd3.png
+        ln -sf /usr/share/enigma2/uniboxhd3.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/uniboxhd3.png
     elif [ ${MACHINE} = "et6x00" ]; then
         for f in ${S}/BoxBranding/boxes/et6*; do
             filename=$(basename "$f")
@@ -101,22 +101,22 @@ do_install_append() {
             ln -sf /usr/share/enigma2/$filename ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/$filename;
         done
     elif [ ${MACHINEBUILD} = "azboxhd" ]; then
-        install -m 0644 ${S}/BoxBranding/boxes/elite.jpg ${D}/usr/share/enigma2/elite.jpg
-        ln -sf /usr/share/enigma2/elite.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/elite.jpg
-        install -m 0644 ${S}/BoxBranding/boxes/premium.jpg ${D}/usr/share/enigma2/premium.jpg
-        ln -sf /usr/share/enigma2/premium.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/premium.jpg
-        install -m 0644 ${S}/BoxBranding/boxes/premium+.jpg ${D}/usr/share/enigma2/premium+.jpg
-        ln -sf /usr/share/enigma2/premium+.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/premium+.jpg
-        install -m 0644 ${S}/BoxBranding/boxes/ultra.jpg ${D}/usr/share/enigma2/ultra.jpg
-        ln -sf /usr/share/enigma2/ultra.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/ultra.jpg
+        install -m 0644 ${S}/BoxBranding/boxes/elite.png ${D}/usr/share/enigma2/elite.png
+        ln -sf /usr/share/enigma2/elite.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/elite.png
+        install -m 0644 ${S}/BoxBranding/boxes/premium.png ${D}/usr/share/enigma2/premium.png
+        ln -sf /usr/share/enigma2/premium.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/premium.png
+        install -m 0644 ${S}/BoxBranding/boxes/premium+.png ${D}/usr/share/enigma2/premium+.png
+        ln -sf /usr/share/enigma2/premium+.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/premium+.png
+        install -m 0644 ${S}/BoxBranding/boxes/ultra.png ${D}/usr/share/enigma2/ultra.png
+        ln -sf /usr/share/enigma2/ultra.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/ultra.png
     elif [ ${MACHINEBUILD} = "xpeedlx" ]; then
-        install -m 0644 ${S}/BoxBranding/boxes/xpeedlx1.jpg ${D}/usr/share/enigma2/xpeedlx1.jpg
-        ln -sf /usr/share/enigma2/xpeedlx1.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/xpeedlx1.jpg
-        install -m 0644 ${S}/BoxBranding/boxes/xpeedlx2.jpg ${D}/usr/share/enigma2/xpeedlx2.jpg
-        ln -sf /usr/share/enigma2/xpeedlx2.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/xpeedlx2.jpg
+        install -m 0644 ${S}/BoxBranding/boxes/xpeedlx1.png ${D}/usr/share/enigma2/xpeedlx1.png
+        ln -sf /usr/share/enigma2/xpeedlx1.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/xpeedlx1.png
+        install -m 0644 ${S}/BoxBranding/boxes/xpeedlx2.png ${D}/usr/share/enigma2/xpeedlx2.png
+        ln -sf /usr/share/enigma2/xpeedlx2.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/xpeedlx2.png
     else
-        install -m 0644 ${S}/BoxBranding/boxes/${MACHINEBUILD}.jpg ${D}/usr/share/enigma2/${MACHINEBUILD}.jpg
-        ln -sf /usr/share/enigma2/${MACHINEBUILD}.jpg ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/${MACHINEBUILD}.jpg
+        install -m 0644 ${S}/BoxBranding/boxes/${MACHINEBUILD}.png ${D}/usr/share/enigma2/${MACHINEBUILD}.png
+        ln -sf /usr/share/enigma2/${MACHINEBUILD}.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/images/boxes/${MACHINEBUILD}.png
     fi
     ln -sf /usr/share/enigma2/rc_models ${D}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/static/remotes
 }
